@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {% extends "bootstrap/base.html" %}
+    {% import "bootstrap/wtf.html" as _ %}
+    {% block content %}
+    </div>
+    <div class="container">
+        <h1>Formulário</h1>
+        {% from "_errors.html" import render_field %}
+        <form method="POST" action={{}} role="form">
+            {{ render_field(form.cod) }}
+            {{ render_field(form.nome) }}
+            {{ render_field(form.login) }}
+            {{ render_field(form.altura)}}
+            {{ render_field(form.senha) }}
+            {{ render_field(form.idade)}}
+            {{ render_field(form.email) }}
+            {{ render_field(form.enviar, class="btn btn-primary mb-2")}}
+
+        </form>
+    </div>
+    {% endblock %}
+</body>
+</html>
